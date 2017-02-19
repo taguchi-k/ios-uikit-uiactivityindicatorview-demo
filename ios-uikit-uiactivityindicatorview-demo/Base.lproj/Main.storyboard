@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ios_uikit_uiactivityindicatorview_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +20,60 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mkK-ZE-6j7">
+                                <rect key="frame" x="169" y="120" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="F2n-mI-4g2">
+                                <rect key="frame" x="178" y="207" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ND6-Zw-ak3">
+                                <rect key="frame" x="177" y="277" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFQ-br-GZw">
+                                <rect key="frame" x="30" y="607" width="315" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="ActivityIndicatorAction">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="activityIndicatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R7B-Ar-0Kq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bq-i0-tJy">
+                                <rect key="frame" x="30" y="557" width="315" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="ToggleHidesWhenStopped">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleHidesWhenStopped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5wK-jm-PaH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mFQ-br-GZw" secondAttribute="trailing" constant="30" id="E93-LJ-org"/>
+                            <constraint firstItem="ND6-Zw-ak3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MXN-mm-s7f"/>
+                            <constraint firstItem="F2n-mI-4g2" firstAttribute="top" secondItem="mkK-ZE-6j7" secondAttribute="bottom" constant="50" id="Nul-5I-9yc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mFQ-br-GZw" secondAttribute="bottom" constant="30" id="Q5A-up-GYS"/>
+                            <constraint firstItem="mFQ-br-GZw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="R0l-Op-VGw"/>
+                            <constraint firstItem="9bq-i0-tJy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="XCk-rt-ELW"/>
+                            <constraint firstAttribute="trailing" secondItem="9bq-i0-tJy" secondAttribute="trailing" constant="30" id="fYy-bI-ZEv"/>
+                            <constraint firstItem="F2n-mI-4g2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hF2-dH-5Y7"/>
+                            <constraint firstItem="mkK-ZE-6j7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lZW-Yw-w6d"/>
+                            <constraint firstItem="ND6-Zw-ak3" firstAttribute="top" secondItem="F2n-mI-4g2" secondAttribute="bottom" constant="50" id="pjm-3m-cR4"/>
+                            <constraint firstItem="mFQ-br-GZw" firstAttribute="top" secondItem="9bq-i0-tJy" secondAttribute="bottom" constant="20" id="rS8-hL-9GD"/>
+                            <constraint firstItem="mkK-ZE-6j7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="ytG-yb-G7f"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="grayActivityIndicatorView" destination="ND6-Zw-ak3" id="rW9-jx-EWN"/>
+                        <outlet property="whiteActivityIndicatorView" destination="F2n-mI-4g2" id="KwM-lH-IdY"/>
+                        <outlet property="whiteLargeActivityIndicatorView" destination="mkK-ZE-6j7" id="NoA-va-1OM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
