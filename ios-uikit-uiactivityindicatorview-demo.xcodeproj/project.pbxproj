@@ -13,6 +13,8 @@
 		966845061E59D3EA005A6F2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 966845051E59D3EA005A6F2C /* Assets.xcassets */; };
 		966845091E59D3EA005A6F2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966845071E59D3EA005A6F2C /* LaunchScreen.storyboard */; };
 		966845141E59D3EA005A6F2C /* ios_uikit_uiactivityindicatorview_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966845131E59D3EA005A6F2C /* ios_uikit_uiactivityindicatorview_demoTests.swift */; };
+		96BF32781EAF08500089B0C0 /* ActivityIndicatorViewHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BF32771EAF08500089B0C0 /* ActivityIndicatorViewHelperTests.swift */; };
+		96CC8C061EAD256600643280 /* ActivityIndicatorViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CC8C051EAD256600643280 /* ActivityIndicatorViewHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		9668450F1E59D3EA005A6F2C /* ios-uikit-uiactivityindicatorview-demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-uikit-uiactivityindicatorview-demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		966845131E59D3EA005A6F2C /* ios_uikit_uiactivityindicatorview_demoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_uikit_uiactivityindicatorview_demoTests.swift; sourceTree = "<group>"; };
 		966845151E59D3EA005A6F2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96BF32771EAF08500089B0C0 /* ActivityIndicatorViewHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewHelperTests.swift; sourceTree = "<group>"; };
+		96CC8C051EAD256600643280 /* ActivityIndicatorViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +63,9 @@
 		966844F21E59D3E9005A6F2C = {
 			isa = PBXGroup;
 			children = (
+				966844FC1E59D3EA005A6F2C /* Products */,
 				966844FD1E59D3EA005A6F2C /* ios-uikit-uiactivityindicatorview-demo */,
 				966845121E59D3EA005A6F2C /* ios-uikit-uiactivityindicatorview-demoTests */,
-				966844FC1E59D3EA005A6F2C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +81,12 @@
 		966844FD1E59D3EA005A6F2C /* ios-uikit-uiactivityindicatorview-demo */ = {
 			isa = PBXGroup;
 			children = (
+				96CC8C031EAD214D00643280 /* Controllers */,
+				96CC8C041EAD21A900643280 /* Helpers */,
 				966844FE1E59D3EA005A6F2C /* AppDelegate.swift */,
-				966845001E59D3EA005A6F2C /* ViewController.swift */,
-				966845021E59D3EA005A6F2C /* Main.storyboard */,
 				966845051E59D3EA005A6F2C /* Assets.xcassets */,
-				966845071E59D3EA005A6F2C /* LaunchScreen.storyboard */,
 				9668450A1E59D3EA005A6F2C /* Info.plist */,
+				966845071E59D3EA005A6F2C /* LaunchScreen.storyboard */,
 			);
 			path = "ios-uikit-uiactivityindicatorview-demo";
 			sourceTree = "<group>";
@@ -90,10 +94,36 @@
 		966845121E59D3EA005A6F2C /* ios-uikit-uiactivityindicatorview-demoTests */ = {
 			isa = PBXGroup;
 			children = (
-				966845131E59D3EA005A6F2C /* ios_uikit_uiactivityindicatorview_demoTests.swift */,
+				96BF32761EAF08250089B0C0 /* Helpers */,
 				966845151E59D3EA005A6F2C /* Info.plist */,
+				966845131E59D3EA005A6F2C /* ios_uikit_uiactivityindicatorview_demoTests.swift */,
 			);
 			path = "ios-uikit-uiactivityindicatorview-demoTests";
+			sourceTree = "<group>";
+		};
+		96BF32761EAF08250089B0C0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				96BF32771EAF08500089B0C0 /* ActivityIndicatorViewHelperTests.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		96CC8C031EAD214D00643280 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				966845021E59D3EA005A6F2C /* Main.storyboard */,
+				966845001E59D3EA005A6F2C /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		96CC8C041EAD21A900643280 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				96CC8C051EAD256600643280 /* ActivityIndicatorViewHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				966845011E59D3EA005A6F2C /* ViewController.swift in Sources */,
+				96CC8C061EAD256600643280 /* ActivityIndicatorViewHelper.swift in Sources */,
 				966844FF1E59D3EA005A6F2C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				966845141E59D3EA005A6F2C /* ios_uikit_uiactivityindicatorview_demoTests.swift in Sources */,
+				96BF32781EAF08500089B0C0 /* ActivityIndicatorViewHelperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +263,7 @@
 				966845031E59D3EA005A6F2C /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		966845071E59D3EA005A6F2C /* LaunchScreen.storyboard */ = {
@@ -239,6 +272,7 @@
 				966845081E59D3EA005A6F2C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -414,6 +448,7 @@
 				9668451A1E59D3EA005A6F2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9668451B1E59D3EA005A6F2C /* Build configuration list for PBXNativeTarget "ios-uikit-uiactivityindicatorview-demoTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +457,7 @@
 				9668451D1E59D3EA005A6F2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
